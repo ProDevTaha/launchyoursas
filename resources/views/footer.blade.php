@@ -13,7 +13,7 @@
             <p><strong>Email:</strong> <span>contact@launchyoursaas.com</span></p>
           </div>
           <div class="social-links d-flex mt-4">
-            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61569759606471"><i class="bi bi-facebook"></i></a>
           </div>
         </div>
   
@@ -30,8 +30,30 @@
         </div>
         <div class="col-lg-2 col-md-3 footer-links">
           <h3>Subscribe</h3>
-          <input type="email" class="form-control" placeholder="your mail" />
-          <button class="btn btn-primary mt-2 w-100">send</button>
+          <form action="{{ route('subscribe') }}" method="POST">
+            @csrf
+            @if (session('success'))
+                <div class="alert alert-success" role="alert">
+                    {{ session('success') }}
+                </div>
+            @endif
+            <input type="email" name="email" class="form-control" placeholder="Your email" required />
+            <button type="submit" class="btn btn-primary mt-2 w-100">Send</button>
+        </form>
+      
+      <script>
+          // Check if the alert exists and show it for 2 seconds
+          document.addEventListener('DOMContentLoaded', function () {
+              const alert = document.getElementById('success-alert');
+              if (alert) {
+                  alert.style.display = 'block'; // Show the alert
+                  setTimeout(() => {
+                      alert.style.display = 'none'; // Hide it after 2 seconds
+                  }, 2000);
+              }
+          });
+      </script>
+      
         </div>
       </div>
     </div>

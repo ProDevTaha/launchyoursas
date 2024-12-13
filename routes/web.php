@@ -28,6 +28,10 @@ Route::get('/terms', function () {
     return view('term');
 });
 
+Route::post('subscribe', function () {
+    return redirect('/#footer')->with('success', 'Subscribe success');
+})->name('subscribe');
+
 Route::get('/checkoutDetails/{price}',[CheckoutController::class , 'checkoutDeils']);
 
 Route::controller(CheckoutController::class)->group(function(){

@@ -612,7 +612,7 @@
                     <h3>Basic Plan</h3>
                     <div class="price">
                     <span class="currency">$</span>
-                    <span class="amount">9.9</span>
+                    <span class="amount">49</span>
                     <span class="period">/ month</span>
                     </div>
                     <p class="description">A great starting point for individuals or small teams to access essential features at an affordable price.</p>
@@ -633,7 +633,7 @@
                     </li>
                     </ul>
         
-                    <a href="/checkoutDetails/20" class="btn btn-primary">
+                    <a href="/checkoutDetails/49" class="btn btn-primary">
                     Buy Now
                     <i class="bi bi-arrow-right"></i>
                     </a>
@@ -647,7 +647,7 @@
                     <h3>Standard Plan</h3>
                     <div class="price">
                     <span class="currency">$</span>
-                    <span class="amount">19.9</span>
+                    <span class="amount">59</span>
                     <span class="period">/ month</span>
                     </div>
                     <p class="description">Perfect for growing teams that need additional features, flexibility, and enhanced support.</p>
@@ -672,7 +672,7 @@
                     </li>
                     </ul>
         
-                    <a href="/checkoutDetails/45" class="btn btn-light">
+                    <a href="/checkoutDetails/59" class="btn btn-light">
                     Buy Now
                     <i class="bi bi-arrow-right"></i>
                     </a>
@@ -685,7 +685,7 @@
                     <h3>Premium Plan</h3>
                     <div class="price">
                     <span class="currency">$</span>
-                    <span class="amount">39.9</span>
+                    <span class="amount">89</span>
                     <span class="period">/ month</span>
                     </div>
                     <p class="description">For larger teams or businesses that need advanced features, scalability, and dedicated support for high performance.</p>
@@ -714,7 +714,7 @@
                     </li>
                     </ul>
         
-                    <a  href="/checkoutDetails/70" class="btn btn-primary">
+                    <a  href="/checkoutDetails/89" class="btn btn-primary">
                     Buy Now
                     <i class="bi bi-arrow-right"></i>
                     </a>

@@ -10,9 +10,9 @@ class CheckoutController extends Controller
   public function checkoutDeils($id)
   {
       $plans = [
-          20 => [
+          49 => [
               'name' => 'Basic Plan',
-              'price' => 9.9,
+              'price' => 49,
               'description' => 'A great starting point for individuals or small teams to access essential features at an affordable price.',
               'features' => [
                   ['name' => 'Access to basic features', 'description' => 'Get all the essential tools to kickstart your journey.'],
@@ -23,9 +23,9 @@ class CheckoutController extends Controller
               'delivery' => 'Instant access after payment',
               'how_works' => 'Sign up, choose your plan, make a payment, and start using our service immediately.',
           ],
-          45 => [
+          59 => [
               'name' => 'Standard Plan',
-              'price' => 19.9,
+              'price' => 59,
               'description' => 'Perfect for growing teams that need additional features, flexibility, and enhanced support.',
               'features' => [
                   ['name' => 'Everything in the Basic Plan', 'description' => 'Includes all features of the Basic Plan.'],
@@ -37,9 +37,9 @@ class CheckoutController extends Controller
               'delivery' => 'Instant access after payment',
               'how_works' => 'Sign up, choose your plan, make a payment, and access advanced features right away.',
           ],
-          70 => [
+          89 => [
               'name' => 'Premium Plan',
-              'price' => 39.9,
+              'price' => 89,
               'description' => 'For larger teams or businesses that need advanced features, scalability, and dedicated support for high performance.',
               'features' => [
                   ['name' => 'Everything in the Standard Plan', 'description' => 'Includes all features of the Standard Plan.'],
