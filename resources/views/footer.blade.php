@@ -59,8 +59,18 @@
     </div>
   
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">UNIVERSAL SKILLS LTD</strong> <span>Company Registration Number: 16115542</span> <span>All Rights Reserved</span></p>
-    </div>      
+      <p>© <span>Copyright</span> 
+        <strong class="px-1 sitename">UNIVERSAL SKILLS LTD</strong> 
+        <span>Company Registration Number: 16115542</span> 
+        <span>All Rights Reserved</span> 
+        <span id="currentYear"></span>
+      </p>
+    </div>
+    <script>
+      // Dynamically set the current year
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+     
   
   </footer>
   
