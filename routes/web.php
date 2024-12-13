@@ -21,6 +21,9 @@ Route::get('/', function () {
 Route::get('/privacy', function () {
     return view('privacy');
 });
+Route::get('/refund', function () {
+    return view('refund');
+});
 Route::get('/terms', function () {
     return view('term');
 });

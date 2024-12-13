@@ -7,60 +7,62 @@ use View;
 
 class CheckoutController extends Controller
 {
-    public function checkoutDeils($id){
-        $plans = [
-            20 => [
-                'name' => 'Basic Plan',
-                'price' => 9.9,
-                'description' => 'A great starting point for individuals or small teams to access essential features at an affordable price.',
-                'features' => [
-                    'Access to basic features',
-                    '24/7 customer support',
-                    'Regular updates',
-                ],
-                'duration' => '1 month',
-                'delivery' => 'Instant access after payment',
-                'how_works' => 'Sign up, choose your plan, make a payment, and start using our service immediately.',
-            ],
-            45 => [
-                'name' => 'Standard Plan',
-                'price' => 19.9,
-                'description' => 'Perfect for growing teams that need additional features, flexibility, and enhanced support.',
-                'features' => [
-                    'Everything in the Basic Plan',
-                    'Advanced analytics',
-                    'Priority customer support',
-                    'More integrations',
-                ],
-                'duration' => '1 month',
-                'delivery' => 'Instant access after payment',
-                'how_works' => 'Sign up, choose your plan, make a payment, and access advanced features right away.',
-            ],
-            70 => [
-                'name' => 'Premium Plan',
-                'price' => 39.9,
-                'description' => 'For larger teams or businesses that need advanced features, scalability, and dedicated support for high performance.',
-                'features' => [
-                    'Everything in the Standard Plan',
-                    'Customizable solutions',
-                    'Dedicated account manager',
-                    'Enterprise-grade security',
-                    'Unlimited integrations',
-                ],
-                'duration' => '1 month',
-                'delivery' => 'Instant access after payment and onboarding session',
-                'how_works' => 'Sign up, select your plan, make a payment, and schedule an onboarding session for personalized support.',
-            ]
-        ]; 
-        // Retrieve the plan details based on the id
-        $plan = $plans[$id] ?? null;
-        // If the plan does not exist, redirect to the pricing page
-        if (!$plan) {
-            return redirect()->route('pricing')->with('error', 'Plan not found.');
-        }
-
-        return view('checkoutDetails', compact('plan'));
-    }
+  public function checkoutDeils($id)
+  {
+      $plans = [
+          20 => [
+              'name' => 'Basic Plan',
+              'price' => 9.9,
+              'description' => 'A great starting point for individuals or small teams to access essential features at an affordable price.',
+              'features' => [
+                  ['name' => 'Access to basic features', 'description' => 'Get all the essential tools to kickstart your journey.'],
+                  ['name' => '24/7 customer support', 'description' => 'Receive assistance anytime you need it.'],
+                  ['name' => 'Regular updates', 'description' => 'Stay up-to-date with the latest features and improvements.'],
+              ],
+              'duration' => '1 month',
+              'delivery' => 'Instant access after payment',
+              'how_works' => 'Sign up, choose your plan, make a payment, and start using our service immediately.',
+          ],
+          45 => [
+              'name' => 'Standard Plan',
+              'price' => 19.9,
+              'description' => 'Perfect for growing teams that need additional features, flexibility, and enhanced support.',
+              'features' => [
+                  ['name' => 'Everything in the Basic Plan', 'description' => 'Includes all features of the Basic Plan.'],
+                  ['name' => 'Advanced analytics', 'description' => 'Gain deeper insights into your performance.'],
+                  ['name' => 'Priority customer support', 'description' => 'Get prioritized assistance for faster resolutions.'],
+                  ['name' => 'More integrations', 'description' => 'Connect with more tools and platforms.'],
+              ],
+              'duration' => '1 month',
+              'delivery' => 'Instant access after payment',
+              'how_works' => 'Sign up, choose your plan, make a payment, and access advanced features right away.',
+          ],
+          70 => [
+              'name' => 'Premium Plan',
+              'price' => 39.9,
+              'description' => 'For larger teams or businesses that need advanced features, scalability, and dedicated support for high performance.',
+              'features' => [
+                  ['name' => 'Everything in the Standard Plan', 'description' => 'Includes all features of the Standard Plan.'],
+                  ['name' => 'Customizable solutions', 'description' => 'Tailored solutions to meet your specific needs.'],
+                  ['name' => 'Dedicated account manager', 'description' => 'Work with an expert for personalized support.'],
+                  ['name' => 'Enterprise-grade security', 'description' => 'Top-level security for peace of mind.'],
+                  ['name' => 'Unlimited integrations', 'description' => 'Seamlessly integrate with all necessary tools.'],
+              ],
+              'duration' => '1 month',
+              'delivery' => 'Instant access after payment and onboarding session',
+              'how_works' => 'Sign up, select your plan, make a payment, and schedule an onboarding session for personalized support.',
+          ],
+      ];
+  
+      $plan = $plans[$id] ?? null;
+  
+      if (!$plan) {
+          return redirect()->route('pricing')->with('error', 'Plan not found.');
+      }
+  
+      return view('checkoutDetails', compact('plan'));
+  }
+  
 
     public function checkout(Request $request)
     {

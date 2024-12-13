@@ -3,7 +3,7 @@
     <div class="container footer-top">
       <div class="row gy-5">
         <div class="col-lg-6 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
+          <a href="/" class="logo d-flex align-items-center">
             <span class="sitename">LaunchYourSaas</span>
           </a>
           <div class="footer-contact pt-3">
@@ -21,10 +21,11 @@
           <h3>Quick Links</h3>
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="/#about">About Us</a></li>
+            <li><a href="/#services">Services</a></li>
             <li><a href="/terms">Terms of Service</a></li>
             <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/refund">Refund Policy</a></li>
           </ul>
         </div>
         <div class="col-lg-2 col-md-3 footer-links">
