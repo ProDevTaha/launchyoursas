@@ -612,7 +612,7 @@
                     <h3>Basic Plan</h3>
                     <div class="price">
                     <span class="currency">$</span>
-                    <span class="amount">49</span>
+                    <span class="amount">44</span>
                     <span class="period">/ month</span>
                     </div>
                     <p class="description">A great starting point for individuals or small teams to access essential features at an affordable price.</p>
@@ -633,7 +633,7 @@
                     </li>
                     </ul>
         
-                    <a href="/checkoutDetails/49" class="btn btn-primary">
+                    <a href="/checkoutDetails/44" class="btn btn-primary">
                     Buy Now
                     <i class="bi bi-arrow-right"></i>
                     </a>

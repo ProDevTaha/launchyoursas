@@ -10,9 +10,9 @@ class CheckoutController extends Controller
   public function checkoutDeils($id)
   {
       $plans = [
-          49 => [
+            44 => [
               'name' => 'Basic Plan',
-              'price' => 49,
+              'price' => 44,
               'description' => 'A great starting point for individuals or small teams to access essential features at an affordable price.',
               'features' => [
                   ['name' => 'Access to basic features', 'description' => 'Get all the essential tools to kickstart your journey.'],

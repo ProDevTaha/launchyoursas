@@ -32,6 +32,11 @@ Route::post('subscribe', function () {
     return redirect('/#footer')->with('success', 'Subscribe success');
 })->name('subscribe');
 
+Route::post('contact', function () {
+    return redirect('/#contact')->with('success', 'Your message has been sent. Thank you!');
+})->name('contact');
+
+
 Route::get('/checkoutDetails/{price}',[CheckoutController::class , 'checkoutDeils']);
 
 Route::controller(CheckoutController::class)->group(function(){
