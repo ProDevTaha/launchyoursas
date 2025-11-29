@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\PaypalCheckout;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/checkoutPaypal/{price}', [PaypalCheckout::class , 'informations']);
+Route::post('/checkoutPaypal', [PaypalCheckout::class , 'informationsPost'])->name('sendIfrmations.post');
+Route::get('/checkoutPaypal/Proceed/{price}', [PaypalCheckout::class , 'index'])->name('chekoutIndex');
+Route::get('/create/{amount}', [PaypalCheckout::class , 'create']);
+Route::post('/complete', [PaypalCheckout::class , 'complete']);
 
 Route::get('/', function () {
     return view('welcome');
